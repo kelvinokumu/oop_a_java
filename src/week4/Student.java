@@ -1,6 +1,10 @@
 package week4;
 
+import java.util.Scanner;
+
 public class Student {
+
+    static Scanner sc = new Scanner(System.in);
     public Student(){
         System.out.println("First");
     }
@@ -13,8 +17,14 @@ public class Student {
         System.out.println("Third");
     }
 
-    public void display(){
+    public void display1(){
+        String name = sc.nextLine();
         System.out.println("Display something");
     }
-    
+
+    public void display2(){
+        
+        String name2 = sc.nextLine();
+        System.out.println("Display something");
+    }
 }
