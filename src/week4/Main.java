@@ -1,23 +1,11 @@
 package week4;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args){
+        System.out.println("Start Java");
 
-        Exams ex = new Exams();  // create an object
-        ex.getMean();   // use the object to access the class
-        ex.getName();
-        ex.getStudentResult();   //
-
-        Scanner sc = new Scanner(System.in);
-
-        sc.nextInt();
-        sc.next();
-        sc.nextLine();
-        sc.nextDouble();
-
-        sc.close();
+        Student st1 = new Student("Dennis", 25);
+        Student st2 = new Student(36, "Dennis");
+        // st1.display();
     }
-    
 }
