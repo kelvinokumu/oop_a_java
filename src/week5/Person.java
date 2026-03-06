@@ -1,6 +1,6 @@
 package week5;
 
-public class Person {
+public abstract class Person {
     private String name;
     private String email;
 

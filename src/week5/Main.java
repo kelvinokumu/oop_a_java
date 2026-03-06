@@ -20,6 +20,12 @@ public class Main {
         // st1.Enroll(); // non-static method called using object
 
 
-        Person p1 = new Person("new Person","p1@gmail.com");
+        // created an object to the parent class
+        // Person p1 = new Person("new Person","p1@gmail.com");
     }
 }
+
+// int main(){
+
+//     return 0;
+// }
