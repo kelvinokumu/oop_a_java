@@ -1,5 +1,3 @@
-Hello OOP Java
-Hello OOP Java
-Hello OOP Java
-Hello OOP Java
-Hello OOP Java
+ouma
+kelvin
+okumu
