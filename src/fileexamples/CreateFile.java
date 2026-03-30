@@ -1,33 +1,44 @@
-package fileexamples;
+package week8;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 
-public class CreateFile {
-    public static void main(String[] args) throws IOException {
-        try {
-            File file = new File("hello.txt");
+public class FileExample {
+    public static void main(String[] args) {
 
-            if (file.createNewFile()) {
-                System.out.println("File created");
+        try{
+            File f1 = new File("students.txt");
+            if(f1.createNewFile()){
+                System.out.println("New file created");
             } else {
-                System.out.println("File already exists");
+                System.out.println("File already exists ");
             }
 
-            FileWriter fw = new FileWriter(file);
-            fw.write("Kelvin \n");
-            fw.write("Kelvin \n");
-            fw.write("Kelvin \n");
-            fw.write("Kelvin \n");
-            fw.write("Kelvin \n");
+            String filepath = f1.getAbsolutePath();
+            System.out.println("The file path is "+filepath);
 
-//            fw.close();
-//            fw.flush();
-        } catch (Exception msg) {
-            System.out.println("Error occured "+msg);
-        } finally {
-            System.out.println("Program complete ");
+            FileWriter fileWriter = new FileWriter(f1);
+            fileWriter.write("Java \n");
+            fileWriter.write("Kotlin \n");
+            fileWriter.write("Assembly \n");
+            fileWriter.close();
+//            fileWriter.flush();
+
+            System.out.println("Reading from the same file");
+            FileReader fr = new FileReader(f1);
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            // check if there is something to be printed/displayed
+            while((line = br.readLine()) != null){
+                System.out.print(line);
+            }
+            br.close();
+            System.out.println("Done reading");
+
+        }catch(Exception msg){
+            System.out.println("Error "+msg);
         }
     }
 }
